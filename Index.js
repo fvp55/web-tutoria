@@ -7,6 +7,11 @@ document.getElementById('loginForm').addEventListener('submit', function (e) {
     if (email === 'admin@tuto.com' && password === '123456') {
       alert('¡Bienvenido/a!');
       bootstrap.Modal.getInstance(document.getElementById('authModal')).hide();
+       // Espera 500ms para cerrar el modal y luego redirige
+    setTimeout(() => {
+      window.location.href = 'Tutorias.html'; // Redirección
+    }, 500);
+
     } else {
       alert('Credenciales incorrectas.');
     }
